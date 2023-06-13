@@ -56,6 +56,15 @@
 // -3 -> нет
 // 7 -> нет
 
+// Console.WriteLine("Введтите ваше число");
+// int a = Convert.ToInt32(Console.ReadLine());
+
+// if (a % 2 == 1 || a % 2 == -1) {
+//     Console.WriteLine("Ваше число не четное");
+// }
+// else {
+//     Console.WriteLine("Ваше число четное");
+// }
 
 
 
