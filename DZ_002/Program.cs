@@ -31,7 +31,7 @@
 
 //!!!НАДО ПОПРОБОВАТЬ СДЕЛАТЬ ЧЕРЕЗ ФУНКЦИЮ!!!
 
-// int num = new Random().Next(1, 1000);
+// int num = new Random().Next(1, 100000);
 // System.Console.WriteLine($"Твое число {num}");
 // if (num >= 100)
 // {

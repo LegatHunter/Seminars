@@ -109,3 +109,14 @@
 //         System.Console.WriteLine("Придется поработать");
 //     }
 // }
+
+
+
+void Kvadro(int num)
+{
+    System.Console.WriteLine("Введите число: ");
+    num = num * num;
+}
+int num = Kvadro(num);
+num = Convert.ToInt32(System.Console.ReadLine());
+System.Console.WriteLine($"Ответ {num}");
