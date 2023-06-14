@@ -29,7 +29,39 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-//!!!НАДО ПОПРОБОВАТЬ СДЕЛАТЬ ЧЕРЕЗ ФУНКЦИЮ!!!
+//!!!ЧЕРЕЗ МЕТОД///
+
+// int Three()
+// {
+//     int num = new Random().Next(1, 10000);
+//     System.Console.WriteLine($"Ваше число {num}");
+//     if (num >= 100)
+//     {
+//         while (num > 999)
+//         {
+//             num = num / 10;
+//         }
+//         num = num % 10;
+//         return num;
+//     }  
+//      else
+//      {
+//         return (-1);
+//      }
+// }
+// int temp = Three();
+// if (temp == -1)
+// {
+//     System.Console.WriteLine("Третьей цифры нет");
+// }
+// else
+// {
+//     System.Console.WriteLine($"Третья цифра = {temp}");
+// }
+
+
+
+//!!!НЕ ЧЕРЕЗ МЕТОД!!!
 
 // int num = new Random().Next(1, 100000);
 // System.Console.WriteLine($"Твое число {num}");
@@ -50,11 +82,12 @@
 
 
 
-
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 // 6 -> да
 // 7 -> да
 // 1 -> нет
+
+//!!!НАДО ПОПРОБОВАТЬ СДЕЛАТЬ ЧЕРЕЗ ФУНКЦИЮ!!!
 
 // System.Console.WriteLine("Введите  день недели");
 // int day = Convert.ToInt32(Console.ReadLine());
@@ -70,3 +103,5 @@
 //     }
 //     else System.Console.WriteLine("Выходные");
 // }
+
+
