@@ -7,13 +7,13 @@
 // int Promt(string message)
 // {
 //     System.Console.WriteLine(message);
-//     string value = Console.ReadLine();
+//     string value = System.Console.ReadLine();
 //     int result = Convert.ToInt32(value);
 //     return result;
 // }
 
 // int number = Promt("Введите трехзначное число > ");
-// if (number < 100 || number >= 1000)
+// if (number < 100 || number >= 1000) 
 // {
 //     System.Console.WriteLine("Не трехзначное число");
 //     return;
