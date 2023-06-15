@@ -3,23 +3,75 @@
 // 782 -> 8
 // 918 -> 1
 
-// !!!НУЖНА ОПТИМИЗАЦИЯ!!!
+// !!!ВОЗВРАТНЫЙ МЕТОД!!!
 
-// int Number() {
+// int Number()
+// {
 //     System.Console.WriteLine("Введите трехзначное число");
 //     int num = Convert.ToInt32(Console.ReadLine());
-//     if (num >= 100 && num <= 999) 
+//     if (num >= 100 && num <= 999)
 //     {
 //         return (num = num / 10 % 10);
 //     }
+//     else if (num <= -100 && num >= -999)
+//     {
+//         return num = num / -10 % 10;
+//     }
 //     else
 //     {
-//         return 0;  
+//         return -1;
 //     }
 // }
 // int print = Number();
-// if (print == 0) System.Console.WriteLine("Вы ввели не трехзначное число");
-// else System.Console.WriteLine(print);
+// if (print == -1) System.Console.WriteLine("Вы ввели не трехзначное число");
+// else System.Console.WriteLine ($"Третье число = {print}");
+
+
+
+// !!!НЕ ВОЗВРАТНАЯ ФУНКЦИЯ!!!
+
+// void Number()
+// {
+//     System.Console.WriteLine("Введите трехзначное число");
+//     int num = Convert.ToInt32(Console.ReadLine());
+//     if (num >= 100 && num <= 999)
+//     {
+//         num = num / 10 % 10;
+//         System.Console.WriteLine($"Третье число = {num}");
+//     }
+//     else if (num <= -100 && num >= -999)
+//     {
+//         num = num / -10 % 10;
+//         System.Console.WriteLine($"Третье число = {num}");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine($"Вы ввели не трехзначное число");
+//     }
+// }
+// Number();
+
+
+
+// !!!БЕЗ ФУНКЦИИ!!
+
+// System.Console.WriteLine("Введите трехзначное число");
+// int num = Convert.ToInt32(Console.ReadLine());
+// if (num >= 100 && num <= 999) 
+// {
+//     num = num / 10 % 10;
+//     System.Console.WriteLine($"Третье число = {num}");
+// }
+// else if (num <= -100 && num >= -999)
+// {
+//     num = num / -10 % 10;
+//     System.Console.WriteLine($"Третье число = {num}");
+// }
+// else
+// {
+//     System.Console.WriteLine($"Вы ввели не трехзначное число");  
+// }
+
 
 
 
@@ -87,7 +139,7 @@
 // 7 -> да
 // 1 -> нет
 
-//!!!НАДО ПОПРОБОВАТЬ СДЕЛАТЬ ЧЕРЕЗ ФУНКЦИЮ!!!
+//!!!НАДО ПОПРОБОВАТЬ СДЕЛАТЬ ЧЕРЕЗ МЕТОД!!!
 
 // System.Console.WriteLine("Введите  день недели");
 // int day = Convert.ToInt32(Console.ReadLine());
