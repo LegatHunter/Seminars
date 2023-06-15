@@ -28,7 +28,7 @@
 
 
 
-// !!!НЕ ВОЗВРАТНАЯ ФУНКЦИЯ!!!
+// !!!НЕ ВОЗВРАТНЫЙ МЕТОД!!!
 
 // void Number()
 // {
@@ -53,7 +53,7 @@
 
 
 
-// !!!БЕЗ ФУНКЦИИ!!
+// !!!БЕЗ МЕТОДА!!
 
 // System.Console.WriteLine("Введите трехзначное число");
 // int num = Convert.ToInt32(Console.ReadLine());
@@ -81,11 +81,11 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-//!!!ЧЕРЕЗ МЕТОД///
+//!!!ВОЗВРАТНЫЙ МЕТОД///
 
 // int Three()
 // {
-//     int num = new Random().Next(1, 10000);
+//     int num = new Random().Next(1, 100000);
 //     System.Console.WriteLine($"Ваше число {num}");
 //     if (num >= 100)
 //     {
@@ -113,7 +113,31 @@
 
 
 
-//!!!НЕ ЧЕРЕЗ МЕТОД!!!
+//!!!НЕ ВОЗВРАТНЫЙ МЕТОД!!!
+
+// void Number()
+// {
+//     int num = new Random().Next(1, 100000);
+//     System.Console.WriteLine($"Ваше число {num}");
+//     if (num >= 100)
+//     {
+//         while (num > 999)
+//         {
+//             num = num / 10;
+//         }
+//         num = num % 10;
+//         System.Console.WriteLine($"Третья цифра = {num}");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("Третьей цифры нет");
+//     }
+// }
+// Number();
+
+
+
+//!!!БЕЗ МЕТОДА!!!
 
 // int num = new Random().Next(1, 100000);
 // System.Console.WriteLine($"Твое число {num}");
@@ -134,12 +158,64 @@
 
 
 
+
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 // 6 -> да
 // 7 -> да
 // 1 -> нет
 
-//!!!НАДО ПОПРОБОВАТЬ СДЕЛАТЬ ЧЕРЕЗ МЕТОД!!!
+//!!!ВОЗВРАТНЫЙ МЕТОД///
+
+// int Week() 
+// {
+//     System.Console.WriteLine("Введите день недели: ");
+//     int day = Convert.ToInt32(Console.ReadLine());
+//     if (day < 1 || day > 7)
+//         {
+//             System.Console.WriteLine("Введите правильный день недели");
+//             return -1;
+//         }
+//     else 
+//     {
+//         if (day >= 1 && day <= 5)
+//         {
+//             System.Console.WriteLine("Будни");
+//             return -2;
+//         }
+//         else
+//         {
+//             System.Console.WriteLine("Выходные");
+//             return -3;
+//         } 
+//     }   
+// }
+// Week();
+
+
+
+//!!!НЕ ВОЗВРАТНЫЙ МЕТОД///
+
+// void Week()
+// {
+//     System.Console.WriteLine("Введите  день недели");
+//     int day = Convert.ToInt32(Console.ReadLine());
+//     if (day < 1 || day > 7)
+//     {
+//         System.Console.WriteLine("Введите правильный день недели");
+//     }
+//     else
+//     {
+//         if (day >= 1 && day <= 5)
+//         {
+//             System.Console.WriteLine("Будни");
+//         }
+//         else System.Console.WriteLine("Выходные");
+//     }
+// }
+// Week();
+
+
+//!!!БЕХ МЕТОДА!!!
 
 // System.Console.WriteLine("Введите  день недели");
 // int day = Convert.ToInt32(Console.ReadLine());
@@ -155,5 +231,3 @@
 //     }
 //     else System.Console.WriteLine("Выходные");
 // }
-
-
