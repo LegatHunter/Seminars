@@ -105,3 +105,30 @@
 //     one++;
 //     System.Console.Write($"{kub} ");
 // }
+
+// void Kub(int numberN) {
+//     int count = 1;
+//     while(count <= numberN){
+//         double result = Math.Pow(count, 3);
+//         System.Console.Write($"{result:f0}, ");
+//         count++;
+//     }
+//     Console.WriteLine("\b\b.");
+// }
+// void KubNeg(int numberN) {
+//     int count = 1;
+//     while(count >= numberN){
+//         double result = Math.Pow(count, 3);
+//         System.Console.Write($"{result:f0}, ");
+//         count--;
+//     }
+//     Console.WriteLine("\b\b.");
+// }
+
+// System.Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// if(number > 0){
+//     Kub(number);
+// }
+// else KubNeg(number);
