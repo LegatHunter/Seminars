@@ -58,18 +58,6 @@ int Proizv(int num)
     }
     return pro;
 }
-// void Avg(int num)
-// {
-//     int summ = 0;
-//     double length = 0;
-//     while (num >=1)
-//     {
-//         summ += num % 10;
-//         num /= 10;
-//         length++;
-//     }
-//     double avg = summ / length;  
-// }
 
 // г) среднее арифметическое его цифр;
 
@@ -107,9 +95,28 @@ int SumQ2(int num)
 
 // ж) его первую цифру;
 
-
+int FirstN(int num)
+{
+    while (num > 10)
+    {
+        num /= 10;
+    }
+    return num;
+}
 
 // з) сумму его первой и последней цифр.
+
+int LastN(int num)
+{
+    num %= 10;
+    return num;
+}
+
+int FirstLast(int num)
+{
+    int result = FirstN(num) + LastN(num);
+    return result;
+}
 
 System.Console.WriteLine("Введите число: ");
 int userNum = Convert.ToInt32(Console.ReadLine());
@@ -118,10 +125,17 @@ System.Console.WriteLine($"Сумма: {Summ(userNum)}");
 System.Console.WriteLine($"Произведение: {Proizv(userNum)}");
 System.Console.WriteLine($"Среднее арифметическое: {Avg(userNum)}");
 System.Console.WriteLine($"Сумма квадратов: {SumQ(userNum)}");
-System.Console.WriteLine($"Сумма кубов числа: {SumQ2(userNum)}");
+System.Console.WriteLine($"Сумма кубов: {SumQ2(userNum)}");
+System.Console.WriteLine($"Первое число: {FirstN(userNum)}");
+System.Console.WriteLine($"Второе число: {LastN(userNum)}");
+System.Console.WriteLine($"Сумма первого и второго: {FirstLast(userNum)}");
 
 // Определить минимальное число, большее 200, которое нацело делится на 17. 
 
+int MaxN(int num)
+{
+
+// }
 
 //Найти максимальное из натуральных чисел, не превышающих 5000, которое нацело делится на 39
 
