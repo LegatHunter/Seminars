@@ -117,21 +117,21 @@
 //Задача 4. Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
 //[1, 0, 1, 1, 0, 1, 0, 0]
 
-int[] CreateNewArray(int size_array)
-{
-    int[] random1array = new int[size_array];
-    for (int i = 0; i < size_array; i++)
-    {
-        random1array[i] = new Random().Next(0, 2);
-    }
-    return random1array;
-}
-void PrintArray(int[] array_to_print)
-{
-    System.Console.WriteLine("Держи массив:");
-    for (int i = 0; i < array_to_print.Length; i++)
-        Console.Write(array_to_print[i] + " ");
-}
-int size = 8;
-int[] firstArray = CreateNewArray(size);
-PrintArray(firstArray);
+// int[] CreateNewArray(int size_array)
+// {
+//     int[] random1array = new int[size_array];
+//     for (int i = 0; i < size_array; i++)
+//     {
+//         random1array[i] = new Random().Next(0, 2);
+//     }
+//     return random1array;
+// }
+// void PrintArray(int[] array_to_print)
+// {
+//     System.Console.WriteLine("Держи массив:");
+//     for (int i = 0; i < array_to_print.Length; i++)
+//         Console.Write(array_to_print[i] + " ");
+// }
+// int size = 8;
+// int[] firstArray = CreateNewArray(size);
+// PrintArray(firstArray);
