@@ -82,29 +82,29 @@
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
 
-double[] RandomArray()
-{
-    double size = new Random().Next() * 10;
-    double[] arr = new double[size];
-    for (int i = 0; i < size; i++)
-    {
-        arr[i] = new Random().Next();
-    }
-    return arr;
-}
-
-void PrintArray(double[] arrayPrint)
-{
-    for (int i = 0; i < arrayPrint.Length; i++)
-    {
-        System.Console.Write(arrayPrint[i] + " ");
-    }
-    System.Console.WriteLine(" ");
-}
-
-// int MaxVal(int [] maxVal)
+// double[] RandomArray()
 // {
-//     int result = 0;
+//     int size = new Random().Next(1, 10);
+//     double[] arr = new double[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         arr[i] = (new Random().Next(1, 100)) + (new Random().NextDouble());
+//     }
+//     return arr;
+// }
+
+// void PrintArray(double[] arrayPrint)
+// {
+//     for (int i = 0; i < arrayPrint.Length; i++)
+//     {
+//         System.Console.Write(arrayPrint[i] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
+
+// double MaxVal(double [] maxVal)
+// {
+//     double result = 0;
 //     for (int i = 0; i < maxVal.Length; i++)
 //     if (maxVal[i] > result)
 //     {
@@ -113,9 +113,9 @@ void PrintArray(double[] arrayPrint)
 //     return result;
 // }
 
-// int MinVal(int [] minVal)
+// double MinVal(double [] minVal)
 // {
-//     int result = minVal[0];
+//     double result = minVal[0];
 //     for (int i = 0; i < minVal.Length; i++)
 //     if (minVal[i] < result)
 //     {
@@ -124,9 +124,10 @@ void PrintArray(double[] arrayPrint)
 //     return result;
 // }
 
-double[] a = RandomArray();
-PrintArray(a);
-// int b = MaxVal(a);
-// System.Console.WriteLine($"{b}");
-// int c = MinVal(a);
-// System.Console.WriteLine($"{c}");
+// double[] a = RandomArray();
+// PrintArray(a);
+// double b = MaxVal(a);
+// // System.Console.WriteLine($"{b}");
+// double c = MinVal(a);
+// // System.Console.WriteLine($"{c}");
+// System.Console.WriteLine($"Разница между максимальным и минимальным элементом массива = {b-c}");
