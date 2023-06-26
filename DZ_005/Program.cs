@@ -97,6 +97,7 @@
 // {
 //     for (int i = 0; i < arrayPrint.Length; i++)
 //     {
+//         arrayPrint[i] = Math.Round(arrayPrint[i], 2);
 //         System.Console.Write(arrayPrint[i] + " ");
 //     }
 //     System.Console.WriteLine();
@@ -109,6 +110,7 @@
 //     if (maxVal[i] > result)
 //     {
 //         result = maxVal[i];
+//         result = Math.Round(result, 2);
 //     }
 //     return result;
 // }
@@ -120,6 +122,7 @@
 //     if (minVal[i] < result)
 //     {
 //         result = minVal[i];
+//         result = Math.Round(result, 2);
 //     }
 //     return result;
 // }
