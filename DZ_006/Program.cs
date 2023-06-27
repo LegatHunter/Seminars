@@ -51,4 +51,36 @@
 //x(k1 - k2) = b2-b1
 //x = (b2 - b1) / (k1 - k2)
 
+void ShowArray(double[] arrayToShow)
+{
+    for (int i = 0; i < arrayToShow.Length; i++)
+    {
+        System.Console.Write($"{arrayToShow[i]}");
+        if (i != arrayToShow.Length - 1) System.Console.Write(", ");
+        else System.Console.Write(".");
+    }
+    System.Console.WriteLine();
+}
 
+double [] NewArray()
+{
+    System.Console.Write("Введите b1: ");
+    double b1 = Convert.ToInt32(Console.ReadLine());
+    System.Console.Write("Введите b2: ");
+    double b2 = Convert.ToInt32(Console.ReadLine());
+    System.Console.Write("Введите k1: ");
+    double k1 = Convert.ToInt32(Console.ReadLine());
+    System.Console.Write("Введите k2: ");
+    double k2 = Convert.ToInt32(Console.ReadLine());
+    double x = (b2 - b1) / (k1 - k2);
+    double y1 = Math.Round(k1 * x + b1, 2);
+    double y2 = Math.Round(k2 * x + b2, 2);
+    int size = 2;
+    double [] newArray = new double[size];
+    int i = 0;
+    newArray[i] = y1;
+    newArray[i + 1] = y2;
+    return newArray;
+}
+double [] arr = NewArray();
+ShowArray(arr);
