@@ -2,43 +2,43 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
-// int[] CreateNewArray()
-// {
-//     System.Console.WriteLine("Введите длинну массива: ");
-//     int size = Convert.ToInt32(Console.ReadLine());
-//     int[] userArray = new int[size];
-//     for (int i = 0; i < size; i++)
-//     {
-//         System.Console.WriteLine("Введите элемент массива: ");
-//         int n = Convert.ToInt32(Console.ReadLine());
-//         userArray[i] = n;
-//     }
-//     return userArray;
-// }
+int[] CreateNewArray()
+{
+    System.Console.WriteLine("Введите длинну массива: ");
+    int size = Convert.ToInt32(Console.ReadLine());
+    int[] userArray = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        System.Console.WriteLine("Введите элемент массива: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        userArray[i] = n;
+    }
+    return userArray;
+}
 
-// void ShowArray(int[] arrayToShow)
-// {
-//     for (int i = 0; i < arrayToShow.Length; i++)
-//     {
-//         System.Console.Write($"{arrayToShow[i]}");
-//         if (i != arrayToShow.Length - 1) System.Console.Write(", ");
-//         else System.Console.Write(".");
-//     }
-//     System.Console.WriteLine();
-// }
+void ShowArray(int[] arrayToShow)
+{
+    for (int i = 0; i < arrayToShow.Length; i++)
+    {
+        System.Console.Write($"{arrayToShow[i]}");
+        if (i != arrayToShow.Length - 1) System.Console.Write(", ");
+        else System.Console.Write(".");
+    }
+    System.Console.WriteLine();
+}
 
-// int CountArray(int [] userArray)
-// {
-//     int count = 0;
-//     for(int i = 0; i < userArray.Length; i++)
-//     if (userArray[i] > 0) count++;
-//     return count;
-// }
+int CountArray(int [] userArray)
+{
+    int count = 0;
+    for(int i = 0; i < userArray.Length; i++)
+    if (userArray[i] > 0) count++;
+    return count;
+}
 
-// int[] createdArray = CreateNewArray();
-// ShowArray(createdArray);
-// int c = CountArray(createdArray);
-// System.Console.WriteLine($"Количество чисел > 0 = {c}");
+int[] createdArray = CreateNewArray();
+ShowArray(createdArray);
+int c = CountArray(createdArray);
+System.Console.WriteLine($"Количество чисел > 0 = {c}");
 
 
 // Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
