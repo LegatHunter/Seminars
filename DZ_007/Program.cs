@@ -11,6 +11,7 @@
 //     int line = Convert.ToInt32(Console.ReadLine());
 //     System.Console.WriteLine("Введите количество столбцов: ");
 //     int colum = Convert.ToInt32(Console.ReadLine());
+//     if(line <= 0 || colum <= 0) System.Console.WriteLine("Такого массива не существует");
 //     double [,] array2D = new double [colum,line];
 
 //     for (int i = 0; i < array2D.GetLength(0); i++)
@@ -47,37 +48,77 @@
 // 8 4 2 4
 // 17 -> такого числа в массиве нет
 
-int[,] New2DArray()
+// int[,] New2DArray()
+// {
+//     int line = new Random().Next(1,10);
+//     int colum = new Random().Next(1,10);
+//     int[,] new2DArray = new int[line, colum];
+//     for (int i = 0; i < new2DArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < new2DArray.GetLength(1); j++)
+//         {
+//             new2DArray[i, j] = new Random().Next(-10, 10);
+//         }
+//     }
+//     return new2DArray;
+// }
+
+// void PositionArray(int[,] userArray)
+// {
+//     System.Console.WriteLine("Введите номер строки: ");
+//     int row = Convert.ToInt32(Console.ReadLine());
+//     row--;
+//     System.Console.WriteLine("Введите номер столбца: ");
+//     int colum = Convert.ToInt32(Console.ReadLine());
+//     colum--;
+//     if (row >= userArray.GetLength(0) || colum >= userArray.GetLength(1) || row <= 0 || colum <= 0) System.Console.WriteLine("Такого числа нет");
+//     if (row >= 0 && row < userArray.GetLength(0) && colum >= 0 && colum < userArray.GetLength(1))
+//     {
+//         int position = userArray[row, colum];
+//         System.Console.WriteLine($"Ваше число = {position}");
+//     }
+// }
+
+// void Print2DArray(int[,] array2D)
+// {
+//     for (int i = 0; i < array2D.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array2D.GetLength(1); j++)
+//         {
+//             System.Console.Write(array2D[i, j]);
+//             System.Console.Write(" ");
+//         }
+//         System.Console.WriteLine(" ");
+//     }
+// }
+// int[,] new2DArrayP = New2DArray();
+// Print2DArray(new2DArrayP);
+// PositionArray(new2DArrayP);
+
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+int [,] NewArray()
 {
-    int line = 4;
-    int colum = 4;
-    int[,] new2DArray = new int[line, colum];
-    for (int i = 0; i < new2DArray.GetLength(0); i++)
+    int line = 4;  //new Random().Next(1,10);
+    int colum = 4; //new Random().Next(1,10);
+    int [,] newArray = new int [line, colum];
+    for (int i = 0; i < newArray.GetLength(0); i++)
     {
-        for (int j = 0; j < new2DArray.GetLength(1); j++)
+        for (int j = 0; j < newArray.GetLength(1); j++)
         {
-            new2DArray[i, j] = new Random().Next(-10, 10);
+            newArray[i,j] = new Random().Next(0,10); 
         }
     }
-    return new2DArray;
+    return newArray;
 }
 
-void PositionArray(int[,] userArray)
-{
-    System.Console.WriteLine("Введите номер строки: ");
-    int row = Convert.ToInt32(Console.ReadLine());
-    row -= 1;
-    System.Console.WriteLine("Введите номер столбца: ");
-    int colum = Convert.ToInt32(Console.ReadLine());
-    colum -= 1;
-    if (row >= 0 && row < userArray.GetLength(0) && colum >= 0 && colum < userArray.GetLength(1))
-    {
-        int position = userArray[row, colum];
-        System.Console.WriteLine(position);
-    }
-}
-
-void Print2DArray(int[,] array2D)
+void PrintNewArray(int[,] array2D)
 {
     for (int i = 0; i < array2D.GetLength(0); i++)
     {
@@ -89,14 +130,20 @@ void Print2DArray(int[,] array2D)
         System.Console.WriteLine(" ");
     }
 }
-int[,] new2DArrayP = New2DArray();
-Print2DArray(new2DArrayP);
-PositionArray(new2DArrayP);
 
-// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+int Arifm(int [,] array2D)
+{
+    int line = array2D.GetLength(0);
+    int colum = array2D.GetLength(1);
+    int result = 0;
+    for (int i = 0; i < colum; i++)
+    {
+        result = colum + 1;
+    }
+    return result;
+}
 
-// Например, задан массив:
-// 1 4 7 2
-// 5 9 2 3
-// 8 4 2 4
-// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+int[,] new2DArrayP = NewArray();
+PrintNewArray(new2DArrayP);
+int arifm = Arifm(new2DArrayP);
+System.Console.WriteLine(arifm);
