@@ -166,7 +166,8 @@
 //     System.Console.WriteLine(" ");
 // }
 
-int[,] new2DArrayP = NewArray();
-PrintNewArray(new2DArrayP);
-int arifm = Arifm(new2DArrayP);
-System.Console.WriteLine(arifm);
+// int[,] new2DArrayP = NewArray();
+// PrintNewArray(new2DArrayP);
+// double [] arifm = Arifm(new2DArrayP);
+// System.Console.Write("Среднее арифметическое каждого столбца = ");
+// PrintArifmArray(arifm);
