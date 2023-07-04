@@ -12,11 +12,14 @@ void PrintArray(int [] printArray)
     }
 }
 
-int [] Posled(int size)
+int [] Posled()
 {
-    int s;
-    int [] posl = new int [size];
-    for (int i = 0; i < size; i++)
+    
+    int [] posl = new int [];
+    int s = posl.Length;
+    posl[0] = 1;
+    if ()
+    for (int i = 0; i < s; i++)
     {
         s = posl[i] * 3;
     }

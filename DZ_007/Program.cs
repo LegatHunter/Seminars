@@ -131,19 +131,25 @@ void PrintNewArray(int[,] array2D)
     }
 }
 
-int Arifm(int [,] array2D)
+double [] Arifm(int [,] array2D)
 {
-    int line = array2D.GetLength(0);
-    int colum = array2D.GetLength(1);
-    int result = 0;
-    for (int i = 0; i < colum; i++)
+    int line = array2D.GetLength(0); //4
+    int colum = array2D.GetLength(1); //4
+    double result = 0;
+    int score = 0;
+    for (int i = 0; i < line; i++)
     {
-        result = colum + 1;
+        for (int j = 0; j < colum; j++)
+        {
+            result = array2D[i,j];
+            score = i; 
+        }
     }
+    result = (result / score) * 10;
     return result;
 }
 
-int[,] new2DArrayP = NewArray();
-PrintNewArray(new2DArrayP);
-int arifm = Arifm(new2DArrayP);
-System.Console.WriteLine(arifm);
+// int[,] new2DArrayP = NewArray();
+// PrintNewArray(new2DArrayP);
+// double [] arifm = Arifm(new2DArrayP);
+// PrintNewArray(arifm);
