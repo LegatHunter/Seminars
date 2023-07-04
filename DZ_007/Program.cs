@@ -151,7 +151,7 @@
 //         {
 //             sum += array2D[j,i];
 //         }
-//         result[i] = Math.Round((double) sum/line, 2);
+//         result[i] = Math.Round((double) sum/line, 1);
 //     }
 //     return result;
 // }
