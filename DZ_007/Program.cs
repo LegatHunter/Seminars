@@ -40,6 +40,10 @@
 // double [,] new2DArray = Array2D();
 // Print2DArray(new2DArray);
 
+
+
+
+
 // Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
 
 // Например, задан массив:
@@ -95,6 +99,10 @@
 // Print2DArray(new2DArrayP);
 // PositionArray(new2DArrayP);
 
+
+
+
+
 // Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
 // Например, задан массив:
@@ -103,47 +111,63 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-int [,] NewArray()
-{
-    int line = 4;  //new Random().Next(1,10);
-    int colum = 4; //new Random().Next(1,10);
-    int [,] newArray = new int [line, colum];
-    for (int i = 0; i < newArray.GetLength(0); i++)
-    {
-        for (int j = 0; j < newArray.GetLength(1); j++)
-        {
-            newArray[i,j] = new Random().Next(0,10); 
-        }
-    }
-    return newArray;
-}
+// int [,] NewArray()
+// {
+//     int line = new Random().Next(1,10);
+//     int colum = new Random().Next(1,10);
+//     int [,] newArray = new int [line, colum];
+//     for (int i = 0; i < newArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < newArray.GetLength(1); j++)
+//         {
+//             newArray[i,j] = new Random().Next(0,10); 
+//         }
+//     }
+//     return newArray;
+// }
 
-void PrintNewArray(int[,] array2D)
-{
-    for (int i = 0; i < array2D.GetLength(0); i++)
-    {
-        for (int j = 0; j < array2D.GetLength(1); j++)
-        {
-            System.Console.Write(array2D[i, j]);
-            System.Console.Write(" ");
-        }
-        System.Console.WriteLine(" ");
-    }
-}
+// void PrintNewArray(int[,] array2D)
+// {
+//     for (int i = 0; i < array2D.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array2D.GetLength(1); j++)
+//         {
+//             System.Console.Write(array2D[i, j]);
+//             System.Console.Write(" ");
+//         }
+//         System.Console.WriteLine(" ");
+//     }
+// }
 
-int Arifm(int [,] array2D)
-{
-    int line = array2D.GetLength(0);
-    int colum = array2D.GetLength(1);
-    int result = 0;
-    for (int i = 0; i < colum; i++)
-    {
-        result = colum + 1;
-    }
-    return result;
-}
+// double [] Arifm(int [,] array2D)
+// {
+//     int line = array2D.GetLength(0);
+//     int colum = array2D.GetLength(1);
+//     double [] result = new double [colum];
+//     for (int i = 0; i < colum; i++)
+//     {
+//         int sum = 0;
+//         for (int j = 0; j < line; j++)
+//         {
+//             sum += array2D[j,i];
+//         }
+//         result[i] = Math.Round((double) sum/line, 2);
+//     }
+//     return result;
+// }
 
-int[,] new2DArrayP = NewArray();
-PrintNewArray(new2DArrayP);
-int arifm = Arifm(new2DArrayP);
-System.Console.WriteLine(arifm);
+// void PrintArifmArray(double[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write(array[i]);
+//         System.Console.Write(" ");
+//     }
+//     System.Console.WriteLine(" ");
+// }
+
+// int[,] new2DArrayP = NewArray();
+// PrintNewArray(new2DArrayP);
+// double [] arifm = Arifm(new2DArrayP);
+// System.Console.Write("Среднее арифмитическое каждого столбца = ");
+// PrintArifmArray(arifm);
