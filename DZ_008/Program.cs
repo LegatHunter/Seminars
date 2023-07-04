@@ -243,9 +243,57 @@
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
+int[,,] New3DArray()
+{
+    int line = new Random().Next(1, 10);
+    int colum = new Random().Next(1, 10);
+    int glub = new Random().Next(1,10);
+    int[,,] new3DArray = new int[line, colum, glub];
+    for (int i = 0; i < new3DArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < new3DArray.GetLength(1); j++)
+        {
+            for (int z = 0; z < new3DArray.GetLength(2); z++)
+            {
+                new3DArray[i, j, z] = new Random().Next(10, 100);
+            }
+            
+        }
+    }
+    return new3DArray;
+}
+
+void Print3DArray(int[,,] new3DArray)
+{
+    for (int i = 0; i < new3DArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < new3DArray.GetLength(1); j++)
+        {
+            for (int z = 0; z < new3DArray.GetLength(2); z++)
+            {
+            System.Console.Write($"{new3DArray[i, j, z]}({i}, {j}, {z})");
+            System.Console.Write(" ");
+            }
+        }
+        System.Console.WriteLine();
+    }
+}
+
+int[,,] array3D = New3DArray();
+Print3DArray(array3D);
+
+
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 // Например, на выходе получается вот такой массив:
 // 01 02 03 04
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+
+//Задача 57. Составить частотный словарь элементов двумерного массива. Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
+//{1, 9, 9, 0, 2, 8, 0, 9} -> 
+//0 встречается 2 раза
+//1 встречается 1 раз
+//2 встречается 1 раз
+//8 встречается 1 раз
+//9 встречается 3 раза
