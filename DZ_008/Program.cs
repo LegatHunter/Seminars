@@ -243,44 +243,44 @@
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
-int[,,] New3DArray()
-{
-    int line = new Random().Next(1, 10);
-    int colum = new Random().Next(1, 10);
-    int glub = new Random().Next(1,10);
-    int[,,] new3DArray = new int[line, colum, glub];
-    for (int i = 0; i < new3DArray.GetLength(0); i++)
-    {
-        for (int j = 0; j < new3DArray.GetLength(1); j++)
-        {
-            for (int z = 0; z < new3DArray.GetLength(2); z++)
-            {
-                new3DArray[i, j, z] = new Random().Next(10, 100);
-            }
+// int[,,] New3DArray()
+// {
+//     int line = new Random().Next(1, 10);
+//     int colum = new Random().Next(1, 10);
+//     int glub = new Random().Next(1,10);
+//     int[,,] new3DArray = new int[line, colum, glub];
+//     for (int i = 0; i < new3DArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < new3DArray.GetLength(1); j++)
+//         {
+//             for (int z = 0; z < new3DArray.GetLength(2); z++)
+//             {
+//                 new3DArray[i, j, z] = new Random().Next(10, 100);
+//             }
             
-        }
-    }
-    return new3DArray;
-}
+//         }
+//     }
+//     return new3DArray;
+// }
 
-void Print3DArray(int[,,] new3DArray)
-{
-    for (int i = 0; i < new3DArray.GetLength(0); i++)
-    {
-        for (int j = 0; j < new3DArray.GetLength(1); j++)
-        {
-            for (int z = 0; z < new3DArray.GetLength(2); z++)
-            {
-            System.Console.Write($"{new3DArray[i, j, z]}({i}, {j}, {z})");
-            System.Console.Write(" ");
-            }
-        }
-        System.Console.WriteLine();
-    }
-}
+// void Print3DArray(int[,,] new3DArray)
+// {
+//     for (int i = 0; i < new3DArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < new3DArray.GetLength(1); j++)
+//         {
+//             for (int z = 0; z < new3DArray.GetLength(2); z++)
+//             {
+//                 if (z % 2 == 0) System.Console.WriteLine();
+//                 System.Console.Write($"{new3DArray[i, j, z]}({i}, {j}, {z})");
+//                 System.Console.Write(" ");
+//             }
+//         }
+//     }
+// }
 
-int[,,] array3D = New3DArray();
-Print3DArray(array3D);
+// int[,,] array3D = New3DArray();
+// Print3DArray(array3D);
 
 
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
@@ -289,6 +289,11 @@ Print3DArray(array3D);
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+
+int [,] Spiral()
+{
+    
+}
 
 //Задача 57. Составить частотный словарь элементов двумерного массива. Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
 //{1, 9, 9, 0, 2, 8, 0, 9} -> 
