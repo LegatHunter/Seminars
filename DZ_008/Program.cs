@@ -257,7 +257,7 @@
 //             {
 //                 new3DArray[i, j, z] = new Random().Next(10, 100);
 //             }
-            
+
 //         }
 //     }
 //     return new3DArray;
@@ -283,6 +283,9 @@
 // Print3DArray(array3D);
 
 
+
+
+
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 // Например, на выходе получается вот такой массив:
 // 01 02 03 04
@@ -290,15 +293,70 @@
 // 11 16 15 06
 // 10 09 08 07
 
-int [,] Spiral()
-{
-    
-}
+// int[,] New2DArray()
+// {
+//     int row = 4;
+//     int col = 4;
+//     int value = 1;
+//     int[,] createdArray = new int[row, col];
+//     int n = createdArray.GetLength(0);
+//     int rowStart = 0;
+//     int rowEnd = n - 1;
+//     int colStart = 0;
+//     int colEnd = n - 1;
 
-//Задача 57. Составить частотный словарь элементов двумерного массива. Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
-//{1, 9, 9, 0, 2, 8, 0, 9} -> 
-//0 встречается 2 раза
-//1 встречается 1 раз
-//2 встречается 1 раз
-//8 встречается 1 раз
-//9 встречается 3 раза
+//     while (value <= n * n)
+//     {
+//         for (int i = colStart; i <= colEnd; i++)
+//         {
+//             createdArray[rowStart, i] = value;
+//             value++;
+//         }
+//         rowStart++;
+
+//         for (int i = rowStart; i <= rowEnd; i++)
+//         {
+//             createdArray[i, colEnd] = value;
+//             value++;
+//         }
+//         colEnd--;
+
+//         for (int i = colEnd; i >= colStart; i--)
+//         {
+//             createdArray[rowEnd, i] = value;
+//             value++;
+//         }
+//         rowEnd--;
+
+//         for (int i = rowEnd; i >= rowStart; i--)
+//         {
+//             createdArray[i, colStart] = value;
+//             value++;
+//         }
+//         colStart++;
+//     }
+//     return createdArray;
+// }
+
+// void Print2DArray(int[,] new2DArray)
+// {
+//     for (int i = 0; i < new2DArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < new2DArray.GetLength(1); j++)
+//         {
+//             System.Console.Write(new2DArray[i, j].ToString("D2") + " ");
+//         }
+//         System.Console.WriteLine();
+//     }
+// }
+
+// int[,] new2DArray = New2DArray();
+// Print2DArray(new2DArray);
+
+
+// Задача 57. Составить частотный словарь элементов двумерного массива. Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
+// {1, 9, 9, 0, 2, 8, 0, 9} -> 
+// 0 встречается 2 раза
+// 1 встречается 1 раз
+// 2 встречается 1 раз
+// 8 встречается 1 раз
